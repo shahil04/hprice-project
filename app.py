@@ -35,7 +35,7 @@ if st.button("Predict Price"):
                           columns=['location', 'area_type', 'total_sqft', 'bath', 'bhk','balcony'])
 
     # Make prediction
-    predicted_price = pipe.predict(user_input)[0]
+    predicted_price =abs(pipe.predict(user_input)[0])
 
     st.success(f"💰 Estimated Price: **{predicted_price:.2f} Lakhs**")
 
